@@ -1,0 +1,37 @@
+{
+  "name": "example-cucumber-serenity",
+  "version": "1.0.0",
+  "description": "Automatizacion ejemplo con Serenity/JS, Cucumber y Protractor",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "serenity-bdd update",
+    "clean": "rimraf target",
+    "test:compile": "tsc",
+    "test:execute": "protractor ./protractor.conf.js",
+    "test:report": "serenity-bdd run --features ./features",
+    "test": "failsafe test:compile clean test:execute test:report",
+    "lint": "tslint --project tsconfig.json --format stylish"
+  },
+  "author": "Juan Camilo Murcia Ramos",
+  "license": "ISC",
+  "devDependencies": {
+    "@serenity-js/assertions": "^2.3.4",
+    "@serenity-js/console-reporter": "^2.3.4",
+    "@serenity-js/core": "^2.3.4",
+    "@serenity-js/cucumber": "^2.3.4",
+    "@serenity-js/protractor": "^2.3.4",
+    "@serenity-js/rest": "^2.3.4",
+    "@serenity-js/serenity-bdd": "^2.3.4",
+    "@types/cucumber": "^6.0.1",
+    "@types/node": "^13.13.2",
+    "chromedriver": "^81.0.0",
+    "cucumber": "^6.0.5",
+    "npm-failsafe": "^0.4.1",
+    "protractor": "^5.4.4",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.9.0",
+    "tslint": "^6.1.2",
+    "tslint-microsoft-contrib": "^6.2.0",
+    "typescript": "^3.8.3"
+  }
+}

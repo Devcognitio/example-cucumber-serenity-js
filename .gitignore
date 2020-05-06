@@ -1,0 +1,16 @@
+# IntelliJ
+.idea
+
+# Node
+node_modules
+*.log
+
+# Build artifacts
+target
+
+#js
+*.js
+*.steps.js
+*.steps.js.map
+*.js.map
+!*.conf.js
